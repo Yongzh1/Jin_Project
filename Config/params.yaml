@@ -1,0 +1,101 @@
+parameters:
+  lgbm:
+    learning_rate:
+      type: float
+      low: 0.0001
+      high: 0.1
+    feature_fraction:
+      type: float
+      low: 0.5
+      high: 1.0
+    num_leaves:
+      type: int
+      low: 4
+      high: 768
+    lambda_l2:
+      type: float
+      low: 0.1
+      high: 10.0
+      log: true
+    min_sum_hessian_in_leaf:
+      type: float
+      low: 0.0001
+      high: 100.0
+      log: true
+    bagging_fraction:
+      type: float
+      low: 0.5
+      high: 1.0
+
+  xgboost:
+    learning_rate:
+      type: float
+      low: 0.0001
+      high: 0.1
+      log: true
+    colsample_bytree:
+      type: float
+      low: 0.5
+      high: 1.0
+    gamma:
+      type: float
+      low: 0.001
+      high: 100.0
+      log: true
+    lambda:
+      type: float
+      low: 0.1
+      high: 10.0
+      log: true
+    max_depth:
+      type: int
+      low: 3
+      high: 14
+    min_child_weight:
+      type: float
+      low: 0.0001
+      high: 100.0
+      log: true
+    subsample:
+      type: float
+      low: 0.5
+      high: 1.0
+
+  catboost:
+    depth:
+      type: int
+      low: 3
+      high: 10
+    learning_rate:
+      type: float
+      low: 0.0001
+      high: 0.1
+      log: true
+    random_strength:
+      type: int
+      low: 0
+      high: 100
+    bagging_temperature:
+      type: float
+      low: 0.01
+      high: 100.00
+      log: true
+
+  svm:
+    C:
+      type: float
+      low: 0.0001
+      high: 10.0
+      log: true
+    gamma:
+      type: float
+      low: 0.0001
+      high: 1.0
+      log: true
+
+  lr:
+    C:
+      type: float
+      low: 0.0001
+      high: 10.0
+      log: true
